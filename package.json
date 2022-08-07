@@ -1,0 +1,19 @@
+{
+    "name": "@typescript/lib-dom",
+    "version": "4.7.4",
+    "description": "Override TypeScript lib d.ts for RPGMakerMZ core script",
+    "typings": "lib.dom.d.ts",
+    "author": "t-akatsuki",
+    "license": "Apache-2.0",
+    "keywords": [
+        "TypeScript",
+        "RPGMakerMZ"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/t-akatsuki/utakata-rmmz-ts-lib"
+    },
+    "dependencies": {
+        "typescript": "^4.7.4"
+    }
+}
