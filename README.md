@@ -9,6 +9,8 @@ https://github.com/microsoft/TypeScript
 TypeScriptに標準具備されている`lib-dom.d.ts`に対して競合部分を書き換えたものになります。  
 TypeScript 4.5以降で導入された標準libのオーバーライドを利用する事で競合問題を解決します。
 
+- TypeScriptはApache License, Version 2.0の下で提供されており、改変対象としている`lib-dom.d.ts`も同様です。
+
 ## 使い方
 まだまだ調整箇所がある為、現在はパッケージとして提供していません。  
 ローカルにダウンロードし、`npm install`にてローカルファイルからインストールしてください。
@@ -18,6 +20,8 @@ TypeScript 4.5以降で導入された標準libのオーバーライドを利用
 $ npm install -D utakata-rmmz-ts-lib
 ```
 
+- 【注意】このリポジトリにはRPGツクールMZの型定義は含まれません。
+
 ## 具体的な変更点
 ### Window定義の競合
 `Windows`は`rmmz_core.js`内の定義と重複する。  
@@ -25,7 +29,7 @@ $ npm install -D utakata-rmmz-ts-lib
 
 `lib.dom.d.ts`内におけるグローバルオブジェクトの`window`のinterface定義が`Window`となっている為に競合してしまう模様。
 
-> `interface Window`を`interface GlobalWindow`と名称変更する事で対応。
+> `interface Window`を`interface GlobalWindow`と名称変更する事で対応。  
 > RPGツクールMZの定義で上書きされてしまい宣言と矛盾する為、`declare var Window`宣言をコメントアウトする事で対応。
 
 ### StorageManager定義の競合
